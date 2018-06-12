@@ -1,0 +1,87 @@
+mixin post(img, author_img, author, meta, avg_rating, rating1, rating2, rating3)
+	article
+		figure
+			img(src=img)
+			button.delete_post
+				i.fa.fa-trash-o
+
+		.main_content
+			.metadata
+				img(src=author_img)
+				div
+					p By 
+						span=author
+					label=meta
+
+			.content_header
+				aside
+					h3 Article title
+					.rating
+						if rating1
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-o
+							i.fa.fa-star-o
+						if rating2
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-half-o
+
+						if rating3
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-o
+
+
+						span Avg. rating 
+							strong=avg_rating
+
+				.like_rate_wrapper
+					button
+						i.fa.fa-heart-o
+						label Like
+
+					button
+						i.fa.fa-star-o
+						label Rate
+			.content_text
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		.comment_wrapper
+			input(type="text" placeholder="Add comment...")
+
+mixin evaluation_card(user_img, name, location, approved, proffesion, signed)
+	.evaluation_card
+		.evaluation_card-header
+			.bio
+				img(src=user_img)
+				aside
+					p=name
+					label=location 
+						i.fa.fa-map-marker
+			.evaluation_status
+				if approved
+					label.approved Approved
+				else
+					label.declined Declined
+				if signed
+					label.signed Signed
+						i.fa.fa-check-circle
+
+		.evaluation_card-body
+			label Candidate applied for
+			h5=proffesion
+
+		.evaluation_card-actions
+			form
+				input(type="text" placeholder="Type your report...")
+				button(type="submit")
+					i.fa.fa-plus
+					label Add report
+

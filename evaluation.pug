@@ -1,0 +1,108 @@
+doctype html
+html(lang="en")
+	head
+		//- Including the head content
+		include tools/jade_includes/head
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous")
+	body
+		include tools/jade_includes/components/mixins
+		include tools/jade_includes/components/delete_modal
+		
+		section
+			header
+				.ks-wrapper-small
+					nav
+						a(href="index.html") Timeline
+						a(href="evaluation.html").active Evaluation
+
+					.header_button
+						button
+							i.fa.fa-pie-chart
+							label View stats
+
+
+			.modal
+				.ks-wrapper-small
+					.modal_heading
+						h4 Evaluation stats
+						i.fa.fa-times
+
+					.modal_options
+						.select_box
+							.selected
+								label Job Position
+								i.fa.fa-caret-down
+							.dropdown
+								label ---
+								label Job Position
+								label Approved
+								label Declined
+
+
+					.modal_body
+						main
+							canvas#chart
+
+					
+
+
+			.ks-wrapper-small
+				header
+					h1 Evaluation
+				main
+					.evaluation_wrapper
+						.evaluation_header
+							h4 Evaluation in progress
+						.evaluation_progress
+							aside
+								h5 Test
+								i.fa.fa-check-circle
+							aside
+								h5 Interview
+								i.fa.fa-check-circle
+							aside
+								h5 Final Interview
+								i.fa.fa-circle-o
+
+						.evaluation_list
+							+evaluation_card('https://randomuser.me/api/portraits/women/65.jpg', 'Jane Andrews', 'Columbus, OH', 'approved', 'UI/UX Designer', null)
+							+evaluation_card('https://randomuser.me/api/portraits/men/91.jpg', 'Ron Davis', 'Pasadena, CA', null, 'Business Analyst', null)
+							+evaluation_card('https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg', 'Anand Vaikar', 'Mumbai, India', 'approved', 'Back-end Developer', 'signed')
+							+evaluation_card('https://randomuser.me/api/portraits/women/26.jpg', 'Julie Mills', 'London, UK', 'approved', 'QA Engineer', 'signed')
+							+evaluation_card('https://randomuser.me/api/portraits/women/23.jpg', 'Rebeca Black', 'Stirling, UK', null, 'Back-end Developer', null)
+							+evaluation_card('https://randomuser.me/api/portraits/men/23.jpg', 'Pedro Alvarez y Montoya de Bibar', 'Castilla, Spain', 'approved', 'QA Engineer', null)
+
+
+
+
+		//- Including scripts
+		include tools/jade_includes/scripts
+		script.
+			const ctx = $('#chart')[0].getContext('2d');
+			const chart = new Chart(ctx, {
+				type: 'pie',
+				data: {
+					labels: ['UI/UX designers', 'QA Engineers', 'Back-end developers', 'Business analyst'],
+					datasets: [{
+						data: [10, 40, 40, 10],
+						backgroundColor: [
+							'skyblue',
+							'firebrick',
+							'coral',
+							'lightgreen'
+						]
+					}]
+				},
+				options: {
+					legend: {
+						position: 'right',
+						fullWidth: false,
+						labels: {
+							fontSize: 12,
+							boxWidth: 30,
+							fontColor: 'white'
+						}
+						
+					}
+				}
+			});

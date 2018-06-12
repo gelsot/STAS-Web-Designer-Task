@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+	head
+		//- Including the head content
+		include tools/jade_includes/head
+	body
+		include tools/jade_includes/components/mixins
+		include tools/jade_includes/components/delete_modal
+		
+		section
+			header
+				.ks-wrapper-small
+					nav
+						a(href="index.html").active Timeline
+						a(href="evaluation.html") Evaluation
+
+					.header_button
+						button
+							i.fa.fa-plus
+							label Add new post
+			.modal
+				.ks-wrapper-small
+					.modal_heading
+						h4 Write new post
+						i.fa.fa-times
+
+					.modal_body
+						textarea(placeholder="Write your post here...")
+
+					.modal_options
+						button
+							i.fa.fa-paperclip
+							label Add file
+
+						button
+							i.fa.fa-image
+							label Add image
+
+						button
+							i.fa.fa-video-camera
+							label Add video
+
+						button(type="submit")
+							i.fa.fa-paper-plane-o
+							label Post it
+
+
+			.ks-wrapper-small
+				header
+					h1 Timeline
+				main
+					+post("https://images.unsplash.com/photo-1501347814879-1fbdbf5a37f7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3f53e1211fbc9008316948250928a3f&auto=format&fit=crop&w=500&q=60", "https://randomuser.me/api/portraits/men/43.jpg", "Andrew Roberts", "12.06.2018", '3.0', 'rating1', null, null)
+					+post("https://images.unsplash.com/photo-1503177847378-d2048487fa46?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f8b28e6a318b7c126e31813199050b9b&auto=format&fit=crop&w=667&q=80", "https://randomuser.me/api/portraits/men/42.jpg", "Tony Torturo", "15.06.2018", '4.5', null, 'rating2', null)
+					+post("https://images.unsplash.com/photo-1523380556360-95dee7d9ca6f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a073af2667b4aa04f55a0464db3b08d&auto=format&fit=crop&w=692&q=80", "https://randomuser.me/api/portraits/men/45.jpg", "John Collins", "17.06.2018", '4.0', null, null, 'rating3')
+
+
+			.toast.cancel_toast
+				i.fa.fa-ban
+				p The deleting was unsuccessful
+
+			.toast.confirm_toast
+				i.fa.fa-check
+				p You've deleted this post
+
+
+
+		//- Including scripts
+		include tools/jade_includes/scripts

@@ -1,0 +1,25 @@
+/////////// Button styles ////////////
+button, .selected
+	border: none
+	outline: none
+	background: royalblue
+	padding: 8px 12px
+	border-radius: 3px
+	box-shadow: 0px 2px 8px rgba(black, 0.2)
+	color: white
+	cursor: pointer
+	transition: $transition
+	font-weight: 400
+	font-size: 13.3333px
+	display: inline-block
+	font-family: 'Arial'
+	> *
+		cursor: pointer
+	i
+		transition: 0.1s
+	&:hover
+		box-shadow: 0px 2px 6px rgba(black, 0.6)
+		i
+			transform: scale(1.04)
+	&:active
+		background: darken(royalblue, 10%)

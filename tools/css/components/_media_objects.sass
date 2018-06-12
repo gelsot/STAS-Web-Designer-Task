@@ -1,0 +1,59 @@
+.ks-mo
+    +flex(flex, null, null, null)
+    +size(100%, null)
+    padding: 2rem 0rem
+    margin-bottom: 3rem
+    position: relative
+    .ks-mo-title-ver
+        +size(4rem, null)
+        position: relative
+        
+        label
+            display: inline-block
+            white-space: nowrap
+            +pos(absolute, 0px, null, null, 0px)
+            font-size: 0.75rem
+            font-weight: 800
+            letter-spacing: .2rem
+            text-align: left
+            text-transform: uppercase
+            transform-origin: left top
+            transform: rotate(-90deg) translateX(-100%)
+            border-bottom: 2px solid cornflowerblue
+    .ks-mo-figure
+        +size(40%, null)
+        img
+            +size(100%, 100%)
+            display: block
+            object-fit: cover
+
+    .ks-mo-figure-list
+        +size(10rem, 10rem)
+        +flex(flex, center, center, null)
+        border-radius: 100%
+        overflow: hidden
+        box-shadow: 0px 4px 12px rgba(black, 0.2)
+        img
+            +size(100%, 100%)
+            display: block
+            object-fit: cover
+
+    .ks-mo-desc
+        flex: 1
+        padding-left: 3rem
+        h1, h2, h3, h4, h5, h6
+            color: rgba(black, 0.85)
+        label
+            color: cornflowerblue
+            font-size: 12px
+            font-weight: 600
+        p
+            margin: 10px 0px 20px 0px
+            font-weight: 300
+            line-height: 1.7
+            color: rgba(black, 0.5)
+    
+   
+
+    
+

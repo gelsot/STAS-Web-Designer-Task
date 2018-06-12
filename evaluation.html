@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stas Web Designer Task</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="description" content="Kickstartr is a bolierplate and folder structure for easily creating websites">
+    <meta name="author" content="http://codepen.io/Gelsot/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="bolierplate, folder structure">
+    <meta property="og:title" content="Your title goes here">
+    <meta property="og:url" content="http://codepen.io/Gelsot/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="your logo goes here">
+    <meta property="og:description" content="bolierplate, folder structure">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://codepen.io/Gelsot/">
+    <meta name="twitter:title" content="Your title goes here">
+    <meta name="twitter:description" content="bolierplate, folder structure">
+    <meta name="twitter:image" content="your logo goes here">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="tools/css/main.css">
+    <script src="https://use.fontawesome.com/46b0b11fea.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,800" rel="stylesheet" type="text/css">
+    <!-- if lt IE 9
+    script(src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js')
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="delete_modal_blur">
+      <div class="delete_modal">
+        <div class="delete_modal_heading"><i class="fa fa-times"></i></div>
+        <div class="delete_modal_body"><i class="fa fa-trash-o"></i>
+          <p>Are you sure you want to delete this post?</p>
+        </div>
+        <div class="delete_modal_actions">
+          <button class="delete_modal-cancel"><i class="fa fa-ban"></i>
+            <label>Cancel action</label>
+          </button>
+          <button class="delete_modal-confirm"><i class="fa fa-check"></i>
+            <label>Confirm action</label>
+          </button>
+        </div>
+      </div>
+    </div>
+    <section>
+      <header>
+        <div class="ks-wrapper-small">
+          <nav><a href="index.html">Timeline</a><a class="active" href="evaluation.html">Evaluation</a></nav>
+          <div class="header_button">
+            <button><i class="fa fa-pie-chart"></i>
+              <label>View stats</label>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="modal">
+        <div class="ks-wrapper-small">
+          <div class="modal_heading">
+            <h4>Evaluation stats</h4><i class="fa fa-times"></i>
+          </div>
+          <div class="modal_options">
+            <div class="select_box">
+              <div class="selected">
+                <label>Job Position</label><i class="fa fa-caret-down"></i>
+              </div>
+              <div class="dropdown">
+                <label>---</label>
+                <label>Job Position</label>
+                <label>Approved</label>
+                <label>Declined</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal_body">
+            <main>
+              <canvas id="chart"></canvas>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="ks-wrapper-small">
+        <header>
+          <h1>Evaluation</h1>
+        </header>
+        <main>
+          <div class="evaluation_wrapper">
+            <div class="evaluation_header">
+              <h4>Evaluation in progress</h4>
+            </div>
+            <div class="evaluation_progress">
+              <aside>
+                <h5>Test</h5><i class="fa fa-check-circle"></i>
+              </aside>
+              <aside>
+                <h5>Interview</h5><i class="fa fa-check-circle"></i>
+              </aside>
+              <aside>
+                <h5>Final Interview</h5><i class="fa fa-circle-o"></i>
+              </aside>
+            </div>
+            <div class="evaluation_list">
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://randomuser.me/api/portraits/women/65.jpg">
+                        <aside>
+                          <p>Jane Andrews</p>
+                          <label>Columbus, OH<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="approved">Approved</label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>UI/UX Designer</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://randomuser.me/api/portraits/men/91.jpg">
+                        <aside>
+                          <p>Ron Davis</p>
+                          <label>Pasadena, CA<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="declined">Declined</label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>Business Analyst</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg">
+                        <aside>
+                          <p>Anand Vaikar</p>
+                          <label>Mumbai, India<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="approved">Approved</label>
+                        <label class="signed">Signed<i class="fa fa-check-circle"></i></label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>Back-end Developer</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://randomuser.me/api/portraits/women/26.jpg">
+                        <aside>
+                          <p>Julie Mills</p>
+                          <label>London, UK<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="approved">Approved</label>
+                        <label class="signed">Signed<i class="fa fa-check-circle"></i></label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>QA Engineer</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://randomuser.me/api/portraits/women/23.jpg">
+                        <aside>
+                          <p>Rebeca Black</p>
+                          <label>Stirling, UK<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="declined">Declined</label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>Back-end Developer</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="evaluation_card">
+                    <div class="evaluation_card-header">
+                      <div class="bio"><img src="https://randomuser.me/api/portraits/men/23.jpg">
+                        <aside>
+                          <p>Pedro Alvarez y Montoya de Bibar</p>
+                          <label>Castilla, Spain<i class="fa fa-map-marker"></i></label>
+                        </aside>
+                      </div>
+                      <div class="evaluation_status">
+                        <label class="approved">Approved</label>
+                      </div>
+                    </div>
+                    <div class="evaluation_card-body">
+                      <label>Candidate applied for</label>
+                      <h5>QA Engineer</h5>
+                    </div>
+                    <div class="evaluation_card-actions">
+                      <form>
+                        <input type="text" placeholder="Type your report...">
+                        <button type="submit"><i class="fa fa-plus"></i>
+                          <label>Add report</label>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <script type="text/javascript" src="tools/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="tools/js/vendor/TweenMax.js"></script>
+    <script type="text/javascript" src="tools/js/vendor/TextPlugin.js"></script>
+    <script type="text/javascript" src="tools/js/dist/main-dist.js"></script>
+    <script>
+      const ctx = $('#chart')[0].getContext('2d');
+      const chart = new Chart(ctx, {
+      	type: 'pie',
+      	data: {
+      		labels: ['UI/UX designers', 'QA Engineers', 'Back-end developers', 'Business analyst'],
+      		datasets: [{
+      			data: [10, 40, 40, 10],
+      			backgroundColor: [
+      				'skyblue',
+      				'firebrick',
+      				'coral',
+      				'lightgreen'
+      			]
+      		}]
+      	},
+      	options: {
+      		legend: {
+      			position: 'right',
+      			fullWidth: false,
+      			labels: {
+      				fontSize: 12,
+      				boxWidth: 30,
+      				fontColor: 'white'
+      			}
+      			
+      		}
+      	}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+section
+	article
+		+size(100%, null)
+		background: white
+		border-radius: 3px
+		box-shadow: 0px 3px 8px rgba(black, 0.12)
+		margin-bottom: 2rem
+		figure
+			+size(100%, 250px)
+			border-radius: 3px 3px 0px 0px
+			overflow: hidden
+			position: relative
+			&:hover
+				button
+					opacity: 1
+					visibility: visible
+					transform: scale(1)
+			img
+				+size(100%, 100%)
+				object-fit: cover
+				display: block
+				object-position: 100%
+			button
+				position: absolute
+				top: 1rem
+				right: 1rem
+				z-index: 18
+				background: black
+				opacity: 0
+				visibility: hidden
+				transform: scale(0.85)
+				transition: 0.2s
+
+
+		.main_content
+			padding: 0rem 1rem
+
+
+		.content_header
+			+flex(flex, space-between, center, null)
+			padding: 10px 0px
+
+		.metadata
+			border-bottom: 1px solid rgba(black, 0.1)
+			+flex(flex, null, center, null)
+			padding: 12px 0
+			img
+				+size(40px, 40px)
+				border-radius: 120px
+				box-shadow: 0px 2px 6px rgba(black, 0.2)
+
+			div
+				flex: 1
+				padding-left: 12px
+				+flex(flex, null, null, column)
+
+			p
+				span
+					color: royalblue
+
+			label
+				font-size: 10px
+
+		h3
+			font-size: 1.2rem
+			font-weight: 600
+
+		.rating
+			i
+				font-size: 14px
+				color: royalblue
+				margin: 0px 1px
+
+			span
+				font-size: 12px
+				margin-left: 10px
+				color: rgba(black, 0.4)
+				strong
+					color: royalblue
+
+
+		.content_text
+			padding: 0px 0px 10px 0px
+
+		.comment_wrapper
+			padding: 12px 1rem
+			input
+				border-radius: 3px
+				border: 1px solid rgba(black, 0.12)
+				padding: 10px
+				+size(100%, null)

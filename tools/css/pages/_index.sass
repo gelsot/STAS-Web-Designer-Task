@@ -1,0 +1,43 @@
+section
+	background: #e9ebee
+	+flex(flex, null, null, column)
+	+size(100%, auto)
+	>.ks-wrapper-small
+		margin-top: calc(60px + 1rem)
+		flex: 1
+		margin-bottom: 1rem
+		header
+			margin-bottom: 1rem
+			h1
+				font-size: 1.5rem
+				font-weight: 400
+				
+
+	>header
+		+size(100%, 60px)
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 20
+		background: white
+		border-bottom: 1px solid darken(#e9ebee, 6%)
+		+flex(flex, null, center, null)
+		.ks-wrapper-small
+			+flex(flex, space-between, center, null)
+
+		nav
+			a
+				font-size: 14px
+				margin-right: 1rem
+				&:last-child
+					margin: 0
+				&.active
+					color: royalblue
+					border-bottom: 1px solid royalblue
+
+		
+	
+
+
+
+

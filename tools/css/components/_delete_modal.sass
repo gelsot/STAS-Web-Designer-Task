@@ -1,0 +1,66 @@
+.delete_modal_blur
+	+pos(fixed, 0, 0, 0, 0)
+	+size(100%, 100%)
+	+flex(flex, center, center, null)
+	z-index: 40
+	background: rgba(white, 0.9)
+
+.delete_modal
+	background: white
+	box-shadow: 0px 4px 12px rgba(black, 0.2)
+	padding: 0rem 1rem
+	max-width: 90%
+
+	.delete_modal_heading, .delete_modal_body, .delete_modal_actions
+		padding: 1rem 0px
+
+	.delete_modal_heading
+		+flex(flex, flex-end, center, null)
+		i
+			color: royalblue
+			cursor: pointer
+
+	.delete_modal_body
+		h4
+			font-weight: 300
+			font-size: 18px
+
+		i
+			font-size: 36px
+			color: coral
+			display: block
+			+size(70px, 70px)
+			background: rgba(black, 0.04)
+			border-radius: 120px
+			+flex(flex, center, center, null)
+			margin: 0rem auto 1rem auto
+
+		p
+			width: 80%
+			margin: 0 auto
+			text-align: center
+
+	.delete_modal_actions
+		+flex(flex, space-between, center, null)
+		border-top: 1px solid rgba(black, 0.1)
+		.delete_modal-confirm, .delete_modal-cancel
+			flex: 1
+		.delete_modal-cancel
+			margin-right: 10px
+			background: white
+			color: royalblue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

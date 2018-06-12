@@ -1,0 +1,91 @@
+.modal
+	+size(100%, null)
+	background: royalblue
+	padding: 1rem 0px
+	position: fixed
+	z-index: 19
+	top: calc(0px + 60px)
+	left: 0
+	box-shadow: 0px 3px 12px rgba(black, 0.2)
+	.modal_heading
+		color: white
+		+flex(flex, space-between, center, null)
+		h4
+			font-weight: 400
+		i
+			cursor: pointer
+
+	.modal_body
+		padding: 12px 0px
+		textarea
+			font-family: 'Raleway', sans-serif
+			padding: 12px
+			border: none
+			background: white
+			width: 100%
+			max-width: 100%
+			min-height: 120px
+
+		main
+			padding: 2rem 0px 1rem
+			+size(100%, null)
+			canvas
+				
+				max-width: 90%!important
+
+	.modal_options
+		padding: 12px 0px
+		position: relative
+		button
+			background: white
+			color: royalblue
+
+		[type="submit"]
+			background: darken(royalblue, 15%)
+			color: white
+			float: right
+
+		.select_box
+			+flex(flex, null, flex-start, column)
+			position: absolute
+			left: 0
+
+
+		.selected
+			color: royalblue
+			background: white
+			i
+				margin-left: 4px
+				font-size: 10px
+
+		.dropdown
+			+size(100%, null)
+			margin-top: 4px
+			background: white
+			border-radius: 3px
+			box-shadow: 0px 3px 12px rgba(black, 0.2)
+			padding: 4px 12px
+
+			transform: translateY(5px)
+			opacity: 0
+			visibility: hidden
+			pointer-events: none
+
+			transition: 0.25s ease-out
+			&.open
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+				pointer-events: auto
+			label
+				display: block
+				padding: 5px 0px
+				border-bottom: 1px solid rgba(black, 0.1)
+				font-weight: 400
+				font-size: 13.3333px
+				color: royalblue
+				font-family: 'Arial'
+				cursor: pointer
+				&:last-child
+					border-bottom: none
+			

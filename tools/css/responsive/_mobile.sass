@@ -1,0 +1,75 @@
+@media (max-width: 630px)
+	.modal
+		+size(100%, 100%)
+		.modal_options 
+			[type="submit"]
+				float: none
+				margin-top: 10px
+				width: 100%
+			.select_box
+				+size(100%, null)
+			.selected
+				+size(100%, null)
+				+flex(flex, space-between, center, null)
+	section 
+		>.ks-wrapper-small
+			margin-top: 60px
+			header
+				padding: 1rem 0rem
+				margin-bottom: 0px
+
+	.ks-wrapper-small
+		+size(80%, null)
+
+	article
+		margin-bottom: 1.5rem
+
+
+@media (max-width: 480px)
+	.evaluation_card-header
+		flex-direction: column
+		align-items: flex-start		
+		.evaluation_status
+			flex-direction: row
+			align-items: center
+			margin-top: 15px
+			label
+				align-self: center
+				margin-right: 5px
+				&:last-child
+					margin-right: 0px
+				&.signed
+					margin-top: 0px
+	.evaluation_progress
+		flex-direction: column
+		aside
+			margin-bottom: 7px
+			&:last-child
+				margin-bottom: 0px
+	.evaluation_wrapper
+		padding: 0.7rem
+
+	.evaluation_card-actions
+		padding: 12px
+
+	.ks-wrapper-small
+		+size(95%, null)
+
+@media (max-width: 380px)
+	section
+		article
+			.content_header
+				flex-direction: column
+				align-items: flex-start
+				padding-bottom: 20px
+				aside
+					margin-bottom: 10px
+
+
+
+	.evaluation_card-actions 
+		form
+			flex-direction: column
+			button
+				margin-left: 0px
+				margin-top: 5px

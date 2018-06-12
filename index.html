@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stas Web Designer Task</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="description" content="Kickstartr is a bolierplate and folder structure for easily creating websites">
+    <meta name="author" content="http://codepen.io/Gelsot/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="bolierplate, folder structure">
+    <meta property="og:title" content="Your title goes here">
+    <meta property="og:url" content="http://codepen.io/Gelsot/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="your logo goes here">
+    <meta property="og:description" content="bolierplate, folder structure">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://codepen.io/Gelsot/">
+    <meta name="twitter:title" content="Your title goes here">
+    <meta name="twitter:description" content="bolierplate, folder structure">
+    <meta name="twitter:image" content="your logo goes here">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="tools/css/main.css">
+    <script src="https://use.fontawesome.com/46b0b11fea.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,800" rel="stylesheet" type="text/css">
+    <!-- if lt IE 9
+    script(src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js')
+    -->
+  </head>
+  <body>
+    <div class="delete_modal_blur">
+      <div class="delete_modal">
+        <div class="delete_modal_heading"><i class="fa fa-times"></i></div>
+        <div class="delete_modal_body"><i class="fa fa-trash-o"></i>
+          <p>Are you sure you want to delete this post?</p>
+        </div>
+        <div class="delete_modal_actions">
+          <button class="delete_modal-cancel"><i class="fa fa-ban"></i>
+            <label>Cancel action</label>
+          </button>
+          <button class="delete_modal-confirm"><i class="fa fa-check"></i>
+            <label>Confirm action</label>
+          </button>
+        </div>
+      </div>
+    </div>
+    <section>
+      <header>
+        <div class="ks-wrapper-small">
+          <nav><a class="active" href="index.html">Timeline</a><a href="evaluation.html">Evaluation</a></nav>
+          <div class="header_button">
+            <button><i class="fa fa-plus"></i>
+              <label>Add new post</label>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="modal">
+        <div class="ks-wrapper-small">
+          <div class="modal_heading">
+            <h4>Write new post</h4><i class="fa fa-times"></i>
+          </div>
+          <div class="modal_body">
+            <textarea placeholder="Write your post here..."></textarea>
+          </div>
+          <div class="modal_options">
+            <button><i class="fa fa-paperclip"></i>
+              <label>Add file</label>
+            </button>
+            <button><i class="fa fa-image"></i>
+              <label>Add image</label>
+            </button>
+            <button><i class="fa fa-video-camera"></i>
+              <label>Add video</label>
+            </button>
+            <button type="submit"><i class="fa fa-paper-plane-o"></i>
+              <label>Post it</label>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ks-wrapper-small">
+        <header>
+          <h1>Timeline</h1>
+        </header>
+        <main>
+              <article>
+                <figure><img src="https://images.unsplash.com/photo-1501347814879-1fbdbf5a37f7?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a3f53e1211fbc9008316948250928a3f&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
+                  <button class="delete_post"><i class="fa fa-trash-o"></i></button>
+                </figure>
+                <div class="main_content">
+                  <div class="metadata"><img src="https://randomuser.me/api/portraits/men/43.jpg">
+                    <div>
+                      <p>By <span>Andrew Roberts</span></p>
+                      <label>12.06.2018</label>
+                    </div>
+                  </div>
+                  <div class="content_header">
+                    <aside>
+                      <h3>Article title</h3>
+                      <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><span>Avg. rating <strong>3.0</strong></span>
+                      </div>
+                    </aside>
+                    <div class="like_rate_wrapper">
+                      <button><i class="fa fa-heart-o"></i>
+                        <label>Like</label>
+                      </button>
+                      <button><i class="fa fa-star-o"></i>
+                        <label>Rate</label>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="content_text">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment_wrapper">
+                  <input type="text" placeholder="Add comment...">
+                </div>
+              </article>
+              <article>
+                <figure><img src="https://images.unsplash.com/photo-1503177847378-d2048487fa46?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=f8b28e6a318b7c126e31813199050b9b&amp;auto=format&amp;fit=crop&amp;w=667&amp;q=80">
+                  <button class="delete_post"><i class="fa fa-trash-o"></i></button>
+                </figure>
+                <div class="main_content">
+                  <div class="metadata"><img src="https://randomuser.me/api/portraits/men/42.jpg">
+                    <div>
+                      <p>By <span>Tony Torturo</span></p>
+                      <label>15.06.2018</label>
+                    </div>
+                  </div>
+                  <div class="content_header">
+                    <aside>
+                      <h3>Article title</h3>
+                      <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><span>Avg. rating <strong>4.5</strong></span>
+                      </div>
+                    </aside>
+                    <div class="like_rate_wrapper">
+                      <button><i class="fa fa-heart-o"></i>
+                        <label>Like</label>
+                      </button>
+                      <button><i class="fa fa-star-o"></i>
+                        <label>Rate</label>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="content_text">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment_wrapper">
+                  <input type="text" placeholder="Add comment...">
+                </div>
+              </article>
+              <article>
+                <figure><img src="https://images.unsplash.com/photo-1523380556360-95dee7d9ca6f?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=9a073af2667b4aa04f55a0464db3b08d&amp;auto=format&amp;fit=crop&amp;w=692&amp;q=80">
+                  <button class="delete_post"><i class="fa fa-trash-o"></i></button>
+                </figure>
+                <div class="main_content">
+                  <div class="metadata"><img src="https://randomuser.me/api/portraits/men/45.jpg">
+                    <div>
+                      <p>By <span>John Collins</span></p>
+                      <label>17.06.2018</label>
+                    </div>
+                  </div>
+                  <div class="content_header">
+                    <aside>
+                      <h3>Article title</h3>
+                      <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><span>Avg. rating <strong>4.0</strong></span>
+                      </div>
+                    </aside>
+                    <div class="like_rate_wrapper">
+                      <button><i class="fa fa-heart-o"></i>
+                        <label>Like</label>
+                      </button>
+                      <button><i class="fa fa-star-o"></i>
+                        <label>Rate</label>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="content_text">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment_wrapper">
+                  <input type="text" placeholder="Add comment...">
+                </div>
+              </article>
+        </main>
+      </div>
+      <div class="toast cancel_toast"><i class="fa fa-ban"></i>
+        <p>The deleting was unsuccessful</p>
+      </div>
+      <div class="toast confirm_toast"><i class="fa fa-check"></i>
+        <p>You've deleted this post</p>
+      </div>
+    </section>
+    <script type="text/javascript" src="tools/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="tools/js/vendor/TweenMax.js"></script>
+    <script type="text/javascript" src="tools/js/vendor/TextPlugin.js"></script>
+    <script type="text/javascript" src="tools/js/dist/main-dist.js"></script>
+  </body>
+</html>
